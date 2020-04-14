@@ -12,3 +12,11 @@ arc.set<-matrix(c("A", "B",
 arcs(dag)<-arc.set
 plot(dag)
 graphviz.plot(dag, layout = "circo")
+dsep(dag, x="A", y="B")
+dsep(dag, x="A", y="C")
+dsep(dag, x="A", y="D", z=c("B", "H"))
+dsep(dag, x="A", y="E", z="F")
+dsep(dag, x="G", y="E", z="B")
+dsep(dag, x="F", y="C", z="D")
+dsep(dag, x="E", y="D", z="B")
+dsep(dag, x="C", y="H", z="G")
